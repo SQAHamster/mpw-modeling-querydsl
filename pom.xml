@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>de.unistuttgart.iste.sqa.mpw.modeling</groupId>
+        <artifactId>querydsl-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>./releng/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.parent</relativePath>
+    </parent>
+    
+    <artifactId>querydsl-root</artifactId>
+	<packaging>pom</packaging>
+    
+    <name>QueryDSL Root Project</name>
+    
+    <modules>
+        <module>bundles/de.unistuttgart.iste.sqa.mpw.modeling.querydsl</module>
+        <module>bundles/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.ide</module>
+        <module>bundles/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.ui</module>
+        <module>features/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.feature</module>
+        <module>tests/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.tests</module>
+        <module>releng/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.parent</module>
+        <module>releng/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.targetplatform</module>
+        <module>releng/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.updatesite</module>
+    </modules>
+    
+</project>
