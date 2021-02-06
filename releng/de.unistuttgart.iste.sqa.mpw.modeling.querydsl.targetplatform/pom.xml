@@ -10,5 +10,7 @@
     
     <artifactId>de.unistuttgart.iste.sqa.mpw.modeling.querydsl.targetplatform</artifactId>
     <packaging>eclipse-target-definition</packaging>
+    
+    <name>QueryDSL Target Platform</name>
 
 </project>

@@ -5,6 +5,8 @@
     <artifactId>querydsl-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    
+    <name>QueryDSL Parent</name>
 
     <properties>
         <maven.compiler.release>15</maven.compiler.release>
@@ -115,7 +117,7 @@
 					<target>
                         <artifact>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>querydsl-targetplatform</artifactId>
+                            <artifactId>de.unistuttgart.iste.sqa.mpw.modeling.querydsl.targetplatform</artifactId>
                             <version>${project.version}</version>
                         </artifact>
                     </target>
