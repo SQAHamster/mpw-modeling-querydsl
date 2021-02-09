@@ -29,7 +29,7 @@ jobs:
       - name: switch to branch
         run: git fetch && git checkout querydsl-updatesite && git reset --hard ee01efa497f86625082bd384fe26ed58ff3f9bb4
       - name: update repository folder
-        run: rm -rf ./repository && cp -R ~/deploy-to-branch/repository ./repository
+        run: git clean -fd && rm -rf ./repository && cp -R ~/deploy-to-branch/repository ./repository
       - name: set identity
         run: git config user.email "44242539+fumapps@users.noreply.github.com" && git config user.name "Mario Fuksa"
       - name: commit
