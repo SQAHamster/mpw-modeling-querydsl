@@ -1,0 +1,36 @@
+name: Java CI with Maven / CMake
+
+on:
+  push:
+    branches: [ 'master' ]
+  pull_request:
+    branches: [ 'master' ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 15
+        uses: actions/setup-java@v1
+        with:
+          java-version: 15
+
+      # Run MDE Workflow
+      - name: Process MDE workflow with Maven
+        run: mvn clean install --file pom.xml
+
+      # Deploy to branch
+      
+      - name: copy repository
+        run:  mkdir ~/deploy-to-branch && cp -R releng/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.updatesite/target/repository ~/deploy-to-branch
+      - name: switch to branch
+        run: git fetch && git checkout querydsl-updatesite && git reset --hard ee01efa497f86625082bd384fe26ed58ff3f9bb4
+      - name: update repository folder
+        run: rm -rf ./repository && cp -R ~/deploy-to-branch/repository ./repository
+      - name: set identity
+        run: git config user.email "44242539+fumapps@users.noreply.github.com" && git config user.name "Mario Fuksa"
+      - name: commit
+        run: git add -A && git commit -am 'Update repository snapshot' && git push origin querydsl-updatesite --force
