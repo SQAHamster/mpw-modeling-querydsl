@@ -115,8 +115,8 @@ SimpleCollectionMethod:
 	method=('notEmpty' | 'isEmpty' | 'size' ) '()';
     
 ParametrizedCollectionMethod:
-	('typeSelect(' typeSelect=ID ')') |
-	('at(' indexExpression=Expression ')');
+	('typeSelect' '(' typeSelect=ID ')') |
+	('at' '(' indexExpression=Expression ')');
     
 Direction:
 	('EAST' | 'WEST' | 'SOUTH' | 'NORTH');
