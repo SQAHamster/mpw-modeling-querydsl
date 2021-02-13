@@ -4,6 +4,11 @@
 package de.unistuttgart.iste.sqa.mpw.modeling.querydsl.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.ide.editor.syntaxcoloring.AbstractAntlrTokenToAttributeIdMapper;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
+
+import de.unistuttgart.iste.sqa.mpw.modeling.querydsl.ui.mappers.QueryDslAntlrTokenToAttributeIdMapper;
+import de.unistuttgart.iste.sqa.mpw.modeling.querydsl.ui.mappers.QueryDslHighlightingConfiguration;
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
@@ -12,5 +17,13 @@ public class QueryDslUiModule extends AbstractQueryDslUiModule {
 
 	public QueryDslUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+	}
+	
+	public Class<? extends AbstractAntlrTokenToAttributeIdMapper> bindAbstractAntlrTokenToAttributeIdMapper() {
+		return QueryDslAntlrTokenToAttributeIdMapper.class;
+	}
+	
+	public Class<? extends IHighlightingConfiguration> bindIHighlightingConfiguration () {
+	     return QueryDslHighlightingConfiguration.class;
 	}
 }
