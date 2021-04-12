@@ -27,10 +27,10 @@ jobs:
       - name: copy repository
         run:  mkdir ~/deploy-to-branch && cp -R releng/de.unistuttgart.iste.sqa.mpw.modeling.querydsl.updatesite/target/repository ~/deploy-to-branch
       - name: switch to branch
-        run: git fetch && git checkout querydsl-updatesite && git reset --hard ee01efa497f86625082bd384fe26ed58ff3f9bb4
+        run: git fetch && git checkout querydsl-updatesite-snapshot && git reset --hard ee01efa497f86625082bd384fe26ed58ff3f9bb4
       - name: update repository folder
         run: git clean -fd && rm -rf ./repository && cp -R ~/deploy-to-branch/repository ./repository
       - name: set identity
-        run: git config user.email "44242539+fumapps@users.noreply.github.com" && git config user.name "Mario Fuksa"
+        run: git config user.email "updatesite@users.noreply.github.com" && git config user.name "Updatesite"
       - name: commit
-        run: git add -A && git commit -am 'Update repository snapshot' && git push origin querydsl-updatesite --force
+        run: git add -A && git commit -am 'Update repository snapshot' && git push origin querydsl-updatesite-snapshot --force
