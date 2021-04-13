@@ -3,7 +3,7 @@ Automatic-Module-Name: de.unistuttgart.iste.sqa.mpw.modeling.querydsl.tests
 Bundle-ManifestVersion: 2
 Bundle-Name: de.unistuttgart.iste.sqa.mpw.modeling.querydsl.tests
 Bundle-Vendor: www.iste.uni-stuttgart.de
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.1.qualifier
 Bundle-SymbolicName: de.unistuttgart.iste.sqa.mpw.modeling.querydsl.tests;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: de.unistuttgart.iste.sqa.mpw.modeling.querydsl,
