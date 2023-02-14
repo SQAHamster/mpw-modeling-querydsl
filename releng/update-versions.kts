@@ -8,8 +8,8 @@ import java.nio.charset.Charset
  */
 
 /* Configuration */
-val sourceVersion = "1.0.1-SNAPSHOT"
-val targetVersion = "1.0.1"
+val sourceVersion = "1.0.1"
+val targetVersion = "1.0.2-SNAPSHOT"
 val rootDir = ".."
 val projectName = "querydsl"
 
